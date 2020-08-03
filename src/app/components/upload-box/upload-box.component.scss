@@ -1,0 +1,38 @@
+.box {
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px dashed var(--ion-color-medium);
+  cursor: pointer;
+  display: inline-flex;
+  height: 125px;
+  justify-content: center;
+  position: relative;
+  width: 125px;
+  margin: 8px;
+
+  ion-icon {
+    font-size: 48px;
+  }
+
+  .center {
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--ion-color-dark-contrast);
+    bottom: 0;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+}

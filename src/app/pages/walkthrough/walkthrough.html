@@ -1,0 +1,42 @@
+<ion-content>
+
+  <div class="ion-text-center ion-margin-top" *ngIf="isLoadingViewVisible">
+    <ion-spinner></ion-spinner>
+  </div>
+
+  <empty-view *ngIf="isErrorViewVisible" icon="alert-circle-outline" [text]="'UNKNOWN_ERROR' | translate">
+  </empty-view>
+
+  <empty-view *ngIf="isEmptyViewVisible" icon="alert-circle-outline" [text]="'EMPTY_SLIDES' | translate">
+  </empty-view>
+
+  <div class="full-height" *ngIf="isContentViewVisible">
+    <ion-slides pager (ionSlideDidChange)="onSlideDidChange()" [options]="slidesOptions">
+      <ion-slide [style.background-color]="slide.bgColor" *ngFor="let slide of slides">
+        <div class="slide">
+          <div class="img-wrapper">
+            <img [src]="slide.imageUrl" class="slide-image" />
+          </div>
+          <div class="caption">
+            <div class="slide-title" [style.color]="slide.color">
+              {{ slide.title }}
+            </div>
+            <div class="slide-text" [style.color]="slide.color" [innerHTML]="slide.text">
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <div class="ion-text-center">
+      <ion-button strong fill="clear" color="light" (click)="skip()">
+        {{ "SKIP" | translate }}
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

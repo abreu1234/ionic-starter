@@ -1,0 +1,15 @@
+{
+  "APP_NAME": "Be220 Digital",
+  "APP_DESCRIPTION": "Be220 App Starter",
+  "OK": "OK",
+  "CANCEL": "Cancelar",
+  "CONFIRM": "Confirmar",
+  "CLOSE": "Fechar",
+  "LOADING": "Carregando...",
+  "PHOTO_LIBRARY": "Galeria de fotos",
+  "CAMERA": "Câmera",
+  "CHOOSE_AN_OPTION": "Escolha uma opção",
+  "UNKNOWN_ERROR": "Ocorreu um erro desconhecido",
+  "SKIP": "Pular",
+  "EMPTY_SLIDES": "Nenhum slide encontrado"
+}
