@@ -5,6 +5,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { HTTP } from '@ionic-native/http/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { SafariViewController } from '@ionic-native/safari-view-controller/ngx';
 import { HeaderColor } from '@ionic-native/header-color/ngx';
@@ -16,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { IonicStorageModule } from '@ionic/storage';
 import { ImgFallbackModule } from 'ngx-img-fallback';
-import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image'; 
+import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -52,6 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks },
+    HTTP,
     InAppBrowser,
     SafariViewController,
     HeaderColor,
