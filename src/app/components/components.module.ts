@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { UploadBoxComponent } from './upload-box/upload-box.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { BarRatingModule } from 'ngx-bar-rating';
 
 @NgModule({
 	declarations: [
@@ -16,8 +15,7 @@ import { BarRatingModule } from 'ngx-bar-rating';
 		IonicModule,
 		RouterModule,
 		TranslateModule,
-		LazyLoadImageModule,
-		BarRatingModule
+		LazyLoadImageModule
 	],
 	exports: [
 		UploadBoxComponent

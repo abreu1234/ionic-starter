@@ -7,7 +7,6 @@ import { ImgFallbackModule } from 'ngx-img-fallback';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { ComponentsModule } from './components/components.module';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-import { BarRatingModule } from 'ngx-bar-rating';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { BarRatingModule } from 'ngx-bar-rating';
     LazyLoadImageModule,
     ComponentsModule,
     NgxSkeletonLoaderModule,
-    BarRatingModule,
   ],
   exports: [
     CommonModule,
@@ -32,7 +30,6 @@ import { BarRatingModule } from 'ngx-bar-rating';
     LazyLoadImageModule,
     ComponentsModule,
     NgxSkeletonLoaderModule,
-    BarRatingModule,
   ]
 })
 export class SharedModule {}
